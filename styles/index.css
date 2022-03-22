@@ -41,6 +41,11 @@ header {
   margin: 0;
 }
 
+.logo {
+  color: #fff;
+  background-color: #f00;
+}
+
 .grid-container {
   height: 97vh;
   display: -webkit-box;
