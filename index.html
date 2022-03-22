@@ -8,13 +8,75 @@
   <title>title</title>
 </head>
 <body>
-  <h1>Awesome Books (ES6 version)</h1>
-  <button 
-    type="button" 
-    class="readme-link" 
-    onclick="location.href='https://github.com/mrjuda/sentup-env/blob/main/README.md'"
-  >README.md</button>
+  <div class="grid-container">
+    <!-- START OF GRID-CONTAINER -->
+    <header>
+      <nav class="nav-bar">
+        <div class="logo" id="HomeBtn">Awesome Books (ES6 version)</div>
 
-<script src="./modules/index.js"></script>
+        <ul class="menu" id="Menu">
+          <li class="menu-item" id="LibraryBtn"><a href="#">Library</a></li>
+          <li>|</li>
+          <li class="menu-item" id="NewBtn"><a href="#">Add new</a></li>
+          <li>|</li>
+          <li class="menu-item" id="ContactBtn"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="date-time">
+        <span id='date-time'></span>
+        <button 
+          type="button" 
+          class="readme-link" 
+          onclick="location.href='https://github.com/mrjuda/sentup-env/blob/main/README.md'"
+          >README.md
+        </button>
+      </div>
+    </header>
+    <section class="library" id="Library">
+      <h1>All awesome books</h1>
+      <div id="frontShelf" class="front-shelf">
+        <div class="pre-book">
+          <span>There's nothing worse than an empty library :-(</span>
+        </div>
+        <!-- here goes the dynamic content -->
+      </div>
+    </section>
+
+    <section class="new" id="New">
+      <form>
+        <h2>Add a new book</h2>
+        <label for="newTitle"></label>
+        <input type="text" id="newTitle" name="newTitle" required maxlength="30" placeholder="Title" />
+        <label for="newAuthor"></label>
+        <input type="text" id="newAuthor" name="newAuthor" required maxlength="30" placeholder="Author" />
+        <button id="add" type="button" class="add-btn">
+          Add
+        </button>
+      </form>
+    </section>
+
+    <section class="contact" id="Contact">
+      <h2>Contact information</h2>
+      <p>
+        Do you have any questions or you just want
+        to say "hello"?
+        You can reach out to us!
+      </p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: +005548445221144</li>
+        <li>Our address: Street home 22, 84503 Vity, Country</li>
+      </ul>
+    </section>
+
+    <footer>
+      ©2022 KT Labs™
+    </footer>
+
+  </div> <!-- END OF GRID-CONTAINER -->
+
+
+
+<script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
