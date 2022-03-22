@@ -13,10 +13,10 @@ const hidden = 'hidden';
 const newStr = 'new';
 const contactStr = 'contact';
 
-let pageSetup = () => {
+const pageSetup = () => {
   newPage.className = hidden;
   contactPage.className = hidden;
-}
+};
 
 pageSetup();
 

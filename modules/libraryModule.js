@@ -20,10 +20,11 @@ export default class Library {
 
   static pushToStorage = (obj) => {
     const stringify = JSON.stringify(obj);
-    localStorage.setItem('strShelf', stringify);
+    // localStorage.setItem('strShelf', stringify);
+    sessionStorage.setItem('strShelf', stringify);
   }
 
-  static displayBook = (title, author, id) => {
+  static displayBook(title, author, id) {
     return `
         <span class="title-author">"${title}" by ${author}</span>
         <button class="removeButton" id="${id}" type="button">Remove</button>
@@ -31,7 +32,8 @@ export default class Library {
   }
 
   pullFromStorage = () => {
-    const parsed = JSON.parse(localStorage.getItem('strShelf'));
+    // const parsed = JSON.parse(localStorage.getItem('strShelf'));
+    const parsed = JSON.parse(sessionStorage.getItem('strShelf'));
     let counter = this.shelf.length;
     const preShelf = [];
     for (let i = 0; i < this.shelf.length; i += 1) {
