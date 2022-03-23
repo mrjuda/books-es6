@@ -1,5 +1,8 @@
 /* eslint-disable max-classes-per-file */
 
+// branch books-es6-refactor
+
+import { DateTime } from '../luxon.min.js';
 import Library from '../modules/libraryModule.js';
 
 const libraryBtn = document.getElementById('LibraryBtn');
@@ -38,8 +41,10 @@ libraryBtn.addEventListener('click', () => {
   contactPage.className = hidden;
 });
 
-const dt = new Date();
-document.getElementById('date-time').innerHTML = dt;
+// const dt = new Date();
+const dateTimeNow = DateTime.now();
+// document.getElementById('date-time').innerHTML = dt;
+document.getElementById('date-time').innerHTML = dateTimeNow.toLocaleString(DateTime.DATETIME_MED);
 
 const library = new Library();
 library.setUpAddListener();
